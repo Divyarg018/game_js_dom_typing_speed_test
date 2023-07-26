@@ -18,3 +18,17 @@ body{
     align-items: center;
     background-color: rgba(191, 172, 226, 0.35);
 }
+
+.typing-section{
+    text-align: center;
+}
+
+#textarea{
+    border: .1rem solid #A084DC;
+    border-radius: 1rem;
+    max-width: 50rem;
+    width: 50rem;
+    height: 20rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+}
