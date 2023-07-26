@@ -7,6 +7,19 @@ const btn = document.getElementById('btn');
 const score = document.getElementById('score');
 let startTime, endTime, totalTimeTaken;
 
+const calculateTypingSpeed = (time_taken) => {
+    let  totalWords = typeWords.value.trim();
+    let actualWords = totalWords === '' ? 0 : totalWords.split(" ").length;
+
+    if(actualWords !== 0) {
+        let typing_speed  =  (actualWords / time_taken) * 60;
+        typing_speed = Math.round(typing_speed);
+        score.innerHTML = `Your typing speed is ${typing_speed} words per minutes & you wrote ${actualWords} words & time taken ${time_taken} sec`;
+    }else{
+        score.innerHTML = `Your typing speed is 0 words per minutes & time taken ${time_taken} sec`;
+    }
+}
+
 const startTyping = () => {
     let randomNumber = Math.floor(Math.random() * setOfWords.length);
     console.log(randomNumber);
