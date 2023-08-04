@@ -16,9 +16,9 @@ const calculateTypingSpeed = (time_taken) => {
     if(actualWords !== 0) {
         let typing_speed  =  (actualWords / time_taken) * 60;
         typing_speed = Math.round(typing_speed);
-        score.innerHTML = `Your typing speed is ${typing_speed} & you wrote ${actualWords} words & time taken ${time_taken} sec`;
+        score.innerHTML = `Your typing speed is ${typing_speed} WPM & you wrote ${actualWords} words & time taken ${time_taken} sec`;
     }else{
-        score.innerHTML = `Your typing speed is 0 & time taken ${time_taken} sec`;
+        score.innerHTML = `Your typing speed is 0 WPM & time taken ${time_taken} sec`;
     }
 }
 
