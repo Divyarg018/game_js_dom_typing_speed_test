@@ -18,7 +18,19 @@ const startTyping = () => {
 
     btn.innerText = "Done";
 }
+const endTyping = () => {
+    btn.innerText = "Start";
 
+    let date = new Date();
+    endTime = date.getTime();
+
+    totalTimeTaken = (endTime -startTime) / 1000;
+
+    calculateTypingSpeed(totalTimeTaken);
+
+    msg.innerHTML = "";
+    typeWords.value = "";
+}
 
 
 btn.addEventListener('click', () => {
