@@ -24,7 +24,7 @@ body {
 }
 
 #textarea {
-    border:1rem solid #A884DC ;
+    border: 1rem solid #A884DC;
     border-radius: 1rem;
     max-width: 50rem;
     width: 50rem;
@@ -33,7 +33,7 @@ body {
     font-size: 1.6rem;
 }
 
-#btn{
+#btn {
     display: inline-block;
     padding: 1rem 2.4rem;
     border: none;
@@ -45,3 +45,18 @@ body {
 
 }
 
+h2 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #645CBB;
+    text-align: center;
+}
+
+#showSentence,
+#score {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    letter-spacing: .02rem;
+    text-align: center;
+
+}
