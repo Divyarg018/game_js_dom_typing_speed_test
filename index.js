@@ -9,12 +9,12 @@ let startTime, endTime, totalTimeTaken, sentence_to_write;
 
 
 const errorChecking = (words) => {
-    console.log(words);
+    //console.log(words);
 
     let num = 0;
     sentence_to_write = msg.innerHTML;
     sentence_to_write = sentence_to_write.trim().split(" ");
-     console.log(sentence_to_write);
+     //console.log(sentence_to_write);
     for (let i = 0; i < words.length; i++) {
         if (words[i] === sentence_to_write[i]) {
             num++
