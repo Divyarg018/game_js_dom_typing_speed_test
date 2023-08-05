@@ -5,19 +5,21 @@ const msg = document.getElementById('showSentence');
 const typeWords = document.getElementById('textarea');
 const btn = document.getElementById('btn');
 const score = document.getElementById('score');
-let startTime, endTime, totalTimeTaken;
+let startTime, endTime, totalTimeTaken, sentence_to_write;
+
+
 
 
 
 const calculateTypingSpeed = (time_taken) => {
-    let  totalWords = typeWords.value.trim();
+    let totalWords = typeWords.value.trim();
     let actualWords = totalWords === '' ? 0 : totalWords.split(" ").length;
-
-    if(actualWords !== 0) {
-        let typing_speed  =  (actualWords / time_taken) * 60;
+    actualWords = errorChecking(actualWords);
+    if (actualWords !== 0) {
+        let typing_speed = (actualWords / time_taken) * 60;
         typing_speed = Math.round(typing_speed);
-        score.innerHTML = `Your typing speed is ${typing_speed} WPM & you wrote ${actualWords} words & time taken ${time_taken} sec`;
-    }else{
+        score.innerHTML = `Your typing speed is ${typing_speed} WPM & you wrote ${actualWords} correct words out of ${sentence_to_write.length} & time taken ${time_taken} sec`;
+    } else {
         score.innerHTML = `Your typing speed is 0 WPM & time taken ${time_taken} sec`;
     }
 }
@@ -38,7 +40,7 @@ const endTyping = () => {
     let date = new Date();
     endTime = date.getTime();
 
-    totalTimeTaken = (endTime -startTime) / 1000;
+    totalTimeTaken = (endTime - startTime) / 1000;
 
     calculateTypingSpeed(totalTimeTaken);
 
