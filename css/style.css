@@ -60,3 +60,16 @@ h2 {
     text-align: center;
 
 }
+
+
+span.correct-words {
+    color: chartreuse;
+}
+
+span.out-of {
+    color: chocolate;
+}
+
+span.time-taken {
+    color: blue;
+}
